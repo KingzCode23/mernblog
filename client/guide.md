@@ -36,5 +36,15 @@ export default {
 2. npm i flowbite-react
 3. setup header
 
+// Create and run the server 
+
+1. install express
+2. add api folder
+3. Setup index.js
+4. add module in the package json
+5. install nodemon
+6. add script in the package json "dev": "nodemon api/index.js"
+7. add script in the package json "start": "node api/index.js"
+
 
 
