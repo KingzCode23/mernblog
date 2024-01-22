@@ -46,5 +46,21 @@ export default {
 6. add script in the package json "dev": "nodemon api/index.js"
 7. add script in the package json "start": "node api/index.js"
 
+// connect to database
+
+1. npm install mongoose
+2. go to mongodb
+3. create database
+4. set mognoose 
+  import mongoose from 'mongoose';
+
+  mongoose.connect(
+      'mongodb+srv://kingz:kingz@mern-blog.kw3iqy0.mongodb.net/mern-blog?retryWrites=true&w=majority'
+      ).then(() => {
+          console.log('MongoDb is connected')
+      }).catch((err) =>{
+          console.log(err);
+      });
+5. add dotenv
 
 
