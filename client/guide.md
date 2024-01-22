@@ -63,4 +63,30 @@ export default {
       });
 5. add dotenv
 
+// create models
+
+1. create a file could user.models.js
+2. defined the rules of user Schema
+   const userSchema = new mongoose.Schema({
+    username: {
+        type: String,
+        required: true,
+        unique: true,
+    },
+    email: {
+        type: String,
+        required: true,
+        unique: true,
+    },
+    password: {
+        type: String,
+        required: true,
+    },
+  }, {timestamps: true}
+  ); 
+3. User Models 
+   const User = mongoose.model('User', userSchema);
+   export default User;
+
+
 
