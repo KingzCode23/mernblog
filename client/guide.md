@@ -175,5 +175,11 @@ export default {
     return error;
   };
 5. use it into auth.controller.js 
-   next(errorHndler(400, 'All Field i Required'))
+   next(errorHndler(400, 'All Field i Required'));
 
+// create a signup page UI and add functionality
+
+1. create signup ui with flowbite and style it.
+2. 
+
+//
