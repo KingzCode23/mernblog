@@ -153,8 +153,27 @@ export default {
 13. hash the password for security
 14. install bcryptjs
 
-// create middleware for error handling
+// create middleware and function for error handling
 
-1. 
-      
+1. create middleware to index.js
+   app.use((err, req, res, next) => {
+    const statusCode = err.statusCode || 500;
+    const message = err.message || 'Internal Server Error';
+    res.status(statusCode).json({
+        success: false,
+        statusCode,
+        message
+    });
+    });
+2. use it to auth.controller.js "next";
+3. create a folder utils and file error.js
+4. create function inside the error.js
+   export const errorHandler = (statusCode, message) => {
+    const error = new Error()
+    error.statusCode = statusCode
+    error.message = message
+    return error;
+  };
+5. use it into auth.controller.js 
+   next(errorHndler(400, 'All Field i Required'))
 
