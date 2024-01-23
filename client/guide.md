@@ -88,5 +88,73 @@ export default {
    const User = mongoose.model('User', userSchema);
    export default User;
 
+// Create a test API Route
 
+1. create a route folder and user.route.js
+   import express from 'express';
+
+  const router = express.Router();
+
+  router.get('/test', (req, res) => {
+      res.json({message: 'API is working'})
+  })
+
+  export default router;
+2. use and get api
+3. create a controller and user.controller.js
+   export const test = (req, res) => {
+    res.json({message: 'API is working'});
+   };
+// Create sign up API route
+
+1. create auth.route.js in route folder
+2. set up auth.route.js
+3. create auth.controller.js in controller folder
+4. import auth.controller.js into auth.route.js
+5. then add to index.js
+6. API test in insomia 
+   1. go to insomia
+   2. create collection
+   3. create a folder could auth
+   4. create http request signup
+   5. set it to post
+   6. send from the body
+   7. set into json
+   8. create a body request to api 
+      {
+        "username": "user1",
+        "email": "king@gmail.com",
+        "password": "king"
+      }
+  9. allow the json in the backend from insomia
+     app.use(express.json());
+7. get the req data from the front end body
+8. restructure the auth.controller.js
+9. put extra security in the form
+   if(!username || !email || !password || username === '' || email === '' || password === '') {
+        return res.status(400).json({message: 'All fields are required'});
+   }
+10. create new user
+    const newUser = new User({
+        username,
+        email,
+        password,
+    });
+11. and saved 
+    await newUser.save();
+    res.json('Sign-up Successfully)
+12. add trycatch
+    try {
+        await newUser.save();
+        res.json('Sign-up successful')
+    } catch (error) {
+        res.status(500).json({ message: error.message})
+    }
+13. hash the password for security
+14. install bcryptjs
+
+// create middleware for error handling
+
+1. 
+      
 
