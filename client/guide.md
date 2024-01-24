@@ -180,6 +180,14 @@ export default {
 // create a signup page UI and add functionality
 
 1. create signup ui with flowbite and style it.
-2. 
 
+   
+2. get data from the form using handleChange function
+3. create state for the sign up form, and track the id;
+   state with empty object 
+4. create a handleSubmit in the form to submit the data 
+5. add proxy in vite to target the api
+6. create loading and errorMessage state
+7. create a error if the user input a same credintials
+8. 
 //
