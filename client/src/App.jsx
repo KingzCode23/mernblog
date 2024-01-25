@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import { About, Home, Dashbord, SignIn, SignUp, Projects } from './pages';
 import Header from './Component/Header';
+import Footer from './Component/Footer';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path='/projects' element={<Projects />}/>
         <Route path='/dashbord' element={<Dashbord />}/>
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }

@@ -189,5 +189,4 @@ export default {
 5. add proxy in vite to target the api
 6. create loading and errorMessage state
 7. create a error if the user input a same credintials
-8. 
-//
+8. create a footer
