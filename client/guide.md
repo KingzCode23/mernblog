@@ -190,3 +190,17 @@ export default {
 6. create loading and errorMessage state
 7. create a error if the user input a same credintials
 8. create a footer
+
+// Create a sign in API route
+
+1. create a router in the auth.route.js for singin
+2. create a function in the auth.controller.js
+
+// create a sign in page 
+
+1. copy the code in the sign up 
+2. modify it.
+
+// install redux tool kit
+
+1. 
